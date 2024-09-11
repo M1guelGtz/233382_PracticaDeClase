@@ -1,0 +1,28 @@
+<h1 class="w-full text-center text-4xl my-5">{{message}}</h1>
+
+<div id="table_users">
+    <table class="border border-black w-screen">
+        <tr class="border border-blue-800 bg-cyan-300/30 w-full">            
+            <th>ID</th>
+            <th>NAME</th>
+            <th>USERNAME</th>
+            <th>PHONE</th>
+            <th>WEBSITE</th>
+            <th></th>
+        </tr>
+        <tr *ngFor="let user of users_list" class="border border-blue-300 h-10 text-center">
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.phone}}</td>
+            <td>{{user.website}}</td>
+            <td><button (click)="seleccionar_usuario(user)" class="bg-blue-600 w-11/12 rounded-lg text-white">Seleccionar</button></td>
+        </tr>
+    </table>
+</div>
+
+<br>
+
+<h2 class="w-full text-center text-4xl m-5">FORMULARIO DE USUARIOS</h2>
+
+<app-user-form [user]="selected_user" (event)="eventoRecibido($event) "></app-user-form>
