@@ -1,0 +1,18 @@
+<div class="px-80 mb-5">
+    <div id="form" class="w-full flex flex-col justify-center items-center border border-black rounded-md"> 
+        <label for="user_name ">Nombre:</label>
+        <input class="text-center border border-blue-400 text-black/60 rounded-lg mx-5 w-1/2" type="text" [(ngModel)]="user.name" id="user_name" name="user_name"><br>
+        <label for="username">Username:</label>
+        <input class="text-center border border-blue-400 text-black/60 rounded-lg mx-5 w-1/2" type="text" [(ngModel)]="user.username" id="username" name="username"><br>
+        <label for="user_phone">Phone:</label>
+        <input class="text-center border border-blue-400 text-black/60 rounded-lg mx-5 w-1/2" type="text" [(ngModel)]="user.phone" id="user_phone" name="user_phone"><br>
+        <label for="user_website">Website:</label>
+        <input class="text-center border border-blue-400 text-black/60 rounded-lg mx-5 w-1/2" type="text" [(ngModel)]="user.website" id="user_website" name="user_website"><br>
+        <div class="w-full flex justify-center items-center">
+            <div class="w-1/2 flex justify-evenly p-5">
+                <button (click)="mostrar()" class="p-2 bg-blue-600 border border-white text-white w-1/3 rounded-md">Mostrar</button>
+                <button (click)="enviar()" class="bg-blue-600 border border-white text-white w-1/3 rounded-md">enviar a padre</button>
+            </div>
+        </div>
+    </div>
+</div>
